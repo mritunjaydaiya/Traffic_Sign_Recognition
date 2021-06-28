@@ -1,0 +1,118 @@
+
+.img-preview {
+    width: 256px;
+    height: 256px;
+    border-radius: 8%;
+    position: relative;
+    border: 5px solid #1a1f38;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label{
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 10%;
+    background: #34495E;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.upload-label:hover{
+    background: #34495E;
+    border: 2px solid #1a1f38;
+    color: #000000;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #000; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2dcba7;
+    color: red;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+ }
+
+.floatt {
+    width: 100%;
+    height: 45px;
+    background-color: #343a40;
+    
+}
+
+.marquee {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #343a40;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 30px;
+    font-style:initial;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    will-change: transform;
+    /* show the marquee just outside the paragraph */
+    animation: marquee 25s linear infinite;
+  }
+  
+  .marquee span:hover {
+    animation-play-state: paused
+  }
+   
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { 
+      white-space: normal 
+    }
+    .marquee span {
+      animation: none;
+      padding-left: 0;
+    }
+  }
